@@ -17,6 +17,13 @@ Para executar os testes em sua máquina, você pode baixar esse projeto usando o
 2. Abrir o Cypress `npm run cypress:open` e selecionar o `arquivo .cy` que você quer executar
 3. Se deseja executar os testes no modo headless basta executar o comando: `npx cypress run`
 
+### Execução com o Docker
+
+Foi utilizado Cypress-Docker para construir uma imagem com camada base do Cypress/Browsers
+
+1. Execute o comando `docker pull cypress/browsers`
+2. Após a construção da imagem, execute `docker-compose up`
+3. Execute os cenarios com o comando: `docker run -it -v $PWD:/e2e -w /e2e cypress/included:12.8.1`
 
 ### Projeto
 
